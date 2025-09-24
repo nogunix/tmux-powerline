@@ -123,6 +123,6 @@ fi
 # shellcheck disable=SC1143,SC2128
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-		"pwd $thm_magenta $surface0"
+		"pwd $blue $surface0"
 	)
 fi
