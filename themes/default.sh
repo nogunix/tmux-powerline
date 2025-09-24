@@ -43,13 +43,7 @@ TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SEPARATOR=${TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SE
 if [ -z "$TMUX_POWERLINE_WINDOW_STATUS_CURRENT" ]; then
 	TMUX_POWERLINE_WINDOW_STATUS_CURRENT=(
 		"#[$(tp_format regular)]"
-		"$TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SEPARATOR"
-		"#[$(tp_format inverse)]"
-		" #I#F "
-		"$TMUX_POWERLINE_SEPARATOR_THIN"
-		" #W "
-		"#[$(tp_format regular)]"
-		"$TMUX_POWERLINE_DEFAULT_LEFTSIDE_SEPARATOR"
+#		" #I #W "
 	)
 fi
 
@@ -64,9 +58,7 @@ fi
 if [ -z "$TMUX_POWERLINE_WINDOW_STATUS_FORMAT" ]; then
 	TMUX_POWERLINE_WINDOW_STATUS_FORMAT=(
 		"#[$(tp_format regular)]"
-		"  #I#{?window_flags,#F, } "
-		"$TMUX_POWERLINE_SEPARATOR_THIN"
-		" #W "
+		" #I #W "
 	)
 fi
 
@@ -115,9 +107,9 @@ fi
 if [ -z "$TMUX_POWERLINE_LEFT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
 		"tmux_session_info $blue $thm_bg"
-		"hostname $thm_magenta $thm_bg"
-		"vcs_branch $thm_fg $thm_bg"
+		#"vcs_branch $thm_fg $thm_bg"
 	)
+
 fi
 
 # shellcheck disable=SC1143,SC2128
