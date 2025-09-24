@@ -15,8 +15,8 @@ else
 fi
 
 # See Color formatting section below for details on what colors can be used here.
-TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR:-'235'}
-TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR:-'255'}
+TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR:-'236'}
+TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR:-'153'}
 # shellcheck disable=SC2034
 TMUX_POWERLINE_SEG_AIR_COLOR=$(tp_air_color)
 
@@ -102,15 +102,15 @@ fi
 # shellcheck disable=SC1143,SC2128
 if [ -z "$TMUX_POWERLINE_LEFT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
-		"tmux_session_info 148 234"
-		"hostname 33 0"
+		"tmux_session_info 111 236"
+		"hostname 149 236"
 		#"mode_indicator 165 0"
 		#"ifstat 30 255"
 		#"ifstat_sys 30 255"
-		"lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}"
+		"lan_ip 117 236"
 		#"vpn 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}"
-		"wan_ip 24 255"
-		"vcs_branch 29 88"
+		#"wan_ip 117 236"
+		"vcs_branch 141 236"
 		#"vcs_compare 60 255"
 		#"vcs_staged 64 255"
 		#"vcs_modified 9 255"
@@ -122,23 +122,21 @@ fi
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		#"earthquake 3 0"
-		"pwd 89 211"
+		"pwd 179 236"
 		#"macos_notification_count 29 255"
 		#"mailcount 9 255"
 		# "now_playing 234 37"
 		#"cpu 240 136"
-		"load 237 167"
-		#"tmux_mem_cpu_load 234 136"
-		"battery 137 127"
-		#"air ${TMUX_POWERLINE_SEG_AIR_COLOR} 255"
-		"weather 37 255"
+		#"load 215 236"
+		#"battery 149 236"
+		#"weather 117 236"
 		#"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}"
 		#"xkb_layout 125 117"
 		#"tmux_continuum_save"
 		#"tmux_continuum_status 14 7"
-		"date_day 235 136"
-		"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
-		"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
+		#"date_day 239 153"
+		#"date 239 153 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
+		#"time 239 153 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
 		#"utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
 	)
 fi
